@@ -23,6 +23,6 @@ spec:
           protocol: TCP
         env:
         - name: AUTH_USER
-          value: "antonis"
+          value: "paris"
         - name: AUTH_PASSWORD
-          value: "kalipetis"
+          value: "kasidiaris"
