@@ -19,7 +19,7 @@ spec:
         image: 2hog/docker-training-samples-micro-sinatra
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 5000
+        - containerPort: 4567
           protocol: TCP
         env:
         - name: AUTH_USER
