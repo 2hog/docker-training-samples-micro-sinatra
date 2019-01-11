@@ -1,20 +1,28 @@
-# Sample Sinatra Microservice
+# Sinatra Sample Microservice
 
-This is an example microservice written in Sinatra, intended to be used as part of 2hog's Docker trainings.
+This is an sample microservice written in Sinatra, intended to be used as part of 2hog's Docker trainings.
 
 ## Spec
 It implements a single endpoint (`POST /`), which:
 
-1. Requires basic authentication (configurable via the `AUTH_USER` and `AUTH_PASSWORD` environment variables)
+1. Requires basic authentication
 2. Returns a JSON response with a greeting
 
-## Deployment
+## Example
 
-Before deploying this app with Docker Swarm or Kubernetes, make sure to build its image by running the following command
-
-```sh
-docker build -t 2hog/docker-training-samples-micro-sinatra
 ```
+paris@docker-training-samples-micro-sinatra:/mnt/project$ curl -X POST -d '' -u paris:kasidiaris localhost:3000
+{"greeting":"Geia sou"}
+```
+
+## Configuration
+
+The Sinatra Sample Microservice accepts configuration via environment variables:
+
+- `AUTH_USER`: The username to use for Basic Authentication (default: `paris`)
+- `AUTH_PASSWORD`: The password to use for Basic Authentication (default: `kasidiaris`)
+
+## Deployment
 
 ### Docker Swarm
 
