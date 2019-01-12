@@ -31,7 +31,7 @@ The Sinatra Sample Microservice also accepts and prefers configuration for `AUTH
 
 ## Deployment
 
-## Docker
+### Docker
 
 ```sh
 docker run -d \
