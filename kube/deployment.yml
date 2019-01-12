@@ -23,6 +23,12 @@ spec:
           protocol: TCP
         env:
         - name: AUTH_USER
-          value: "paris"
+          valueFrom:
+            secretKeyRef:
+              name: docker-training-samples-micro-sinatra-secret
+              key: auth_user
         - name: AUTH_PASSWORD
-          value: "kasidiaris"
+          valueFrom:
+            secretKeyRef:
+              name: docker-training-samples-micro-sinatra-secret
+              key: auth_password
