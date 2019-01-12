@@ -5,3 +5,13 @@ services:
     build: .
     volumes:
       - .:/usr/src/app
+    ports:
+      - ${SINATRA_MICRO_EXTERNAL_PORT:-4567}:4567
+    environment:
+      AUTH_USER: ${AUTH_USER:-paris}
+      AUTH_PASSWORD: ${AUTH_PASSWORD:-kasidiaris}
+
+networks:
+  default:
+    name: sinatra-micro-dev
+    driver: bridge

@@ -6,6 +6,15 @@ services:
     init: true
     deploy:
       replicas: 1
-    environment:
-      AUTH_USER: ${AUTH_USER:-paris}
-      AUTH_PASSWORD: ${AUTH_USER:-kasidiaris}
+    secrets:
+      - auth_user
+      - auth_password
+
+secrets:
+  auth_user:
+    external: true
+    name: micro-sinatra-auth-user
+
+  auth_password:
+    external: true
+    name: micro-sinatra-auth-password
